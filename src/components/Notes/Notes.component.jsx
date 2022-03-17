@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Notes.styles.css'
-import notes from '../../db.json'
 import axios from 'axios';
 
 export default class Notes extends Component {
