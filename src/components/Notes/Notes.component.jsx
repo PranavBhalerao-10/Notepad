@@ -58,9 +58,9 @@ export default class Notes extends Component {
                 </div>
                 <div className='container'>
                     <div className='button_container'>
-                        <button className={'btn btn-primary'} onClick={(e) => this.setState({ currentPage: this.state.currentPage - 1 })} disabled={(this.state.currentPage <= 1)}>Previous</button>
+                        <button className={'btn btn-primary'} onClick={(e) => this.setState({ currentPage: this.state.currentPage - 1 })} disabled={(this.state.currentPage <= 1)}>Previous&larr;</button>
                         <span className='page_count'><h2>{this.state.currentPage}</h2></span>
-                        <button className={'btn btn-primary'} onClick={(e) => this.setState({ currentPage: this.state.currentPage + 1 })} disabled={this.state.currentPage >= (Math.ceil(notes.notes.length / 6))}>Next</button>
+                        <button className={'btn btn-primary'} onClick={(e) => this.setState({ currentPage: this.state.currentPage + 1 })} disabled={this.state.currentPage >= (Math.ceil(this.state.notes.length / 6))}>Next&rarr;</button>
                     </div>
                 </div>
             </>
