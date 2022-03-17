@@ -29,7 +29,7 @@ class EditNote extends Component {
     componentDidMount() {
         let noteId = this.props.match.params.id;
 
-        axios.get(`http://localhost:5000/notes/${noteId}`)
+        axios.get(`hhttps://notepad-live.herokuapp.com/notes/${noteId}`)
             .then(response => {
                 this.setState({
                     title: response.data.title,
@@ -52,7 +52,7 @@ class EditNote extends Component {
         // Make an api call to save the note the the id of this.props.match.params.id
         this.setState({ isPinned: !(this.state.isPinned) })
         this.setState({ show: true })
-        axios.patch(`http://localhost:5000/notes/${this.props.match.params.id}`, {
+        axios.patch(`https://notepad-live.herokuapp.com/notes/${this.props.match.params.id}`, {
             isPinned: this.state.isPinned,
         }).then(response => {
             console.log(this.state.show)
@@ -72,7 +72,7 @@ class EditNote extends Component {
     handleSave(e) {
         e.preventDefault();
         // Make an api call to save the note the the id of this.props.match.params.id
-        axios.patch(`http://localhost:5000/notes/${this.props.match.params.id}`, {
+        axios.patch(`https://notepad-live.herokuapp.com/notes/${this.props.match.params.id}`, {
             title: this.state.title,
             body: this.state.body,
             isPinned: this.state.isPinned,

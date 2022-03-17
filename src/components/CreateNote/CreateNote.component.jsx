@@ -13,7 +13,7 @@ const CreateNote = () => {
     const handleSave = (e) => {
         e.preventDefault();
         // Make an api call to create a new note
-        axios.post('http://localhost:5000/notes', {
+        axios.post('https://notepad-live.herokuapp.com/notes', {
             title: title,
             body: body,
             isPinned: isPinned,

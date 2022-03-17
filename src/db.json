@@ -3,7 +3,7 @@
     {
       "title": "XZADS",
       "body": "id=1 edited",
-      "isPinned": true,
+      "isPinned": false,
       "id": 1
     },
     {
@@ -21,7 +21,7 @@
     {
       "title": "xscxzczaxsA",
       "body": "id=6",
-      "isPinned": true,
+      "isPinned": false,
       "id": 6,
       "show": true
     },
