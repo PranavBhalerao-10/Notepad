@@ -113,7 +113,7 @@ class EditNote extends Component {
                             <div>
                                 <button onClick={this.handlePinChange.bind(this)} className="bg-blue-500 text-white px-6 py-3 inline-block mb-6 shadow-lg rounded-lg hover:shadow flex items-center">
                                     <PushPinIcon />
-                                    <span className="hidden ml-2 md:inline">Pin Comment</span>
+                                    <span className="hidden ml-2 md:inline">{this.state.isPinned ? 'Pin Note' : 'Unpin Note'}</span>
                                 </button>
                             </div>
                             <div className="flex">
