@@ -29,7 +29,7 @@ class EditNote extends Component {
     componentDidMount() {
         let noteId = this.props.match.params.id;
 
-        axios.get(`hhttps://notepad-live.herokuapp.com/notes/${noteId}`)
+        axios.get(`https://notepad-live.herokuapp.com/notes/${noteId}`)
             .then(response => {
                 this.setState({
                     title: response.data.title,
@@ -92,7 +92,6 @@ class EditNote extends Component {
                 <header className="bg-gray-900 shadow h-12 w-full mb-4 flex justify-center items-center">
                     <a href="/" className="text-gray-50 font-bold text-lg uppercase tracking-wide">Notes</a>
                 </header>
-
                 <div className="px-4 mb-4">
                     <Alert isPinned={this.state.isPinned} show={this.state.show} />
                     <form className="px-4 py-6 rounded-lg shadow-lg">
