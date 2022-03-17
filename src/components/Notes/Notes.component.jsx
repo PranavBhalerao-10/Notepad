@@ -8,7 +8,6 @@ export default class Notes extends Component {
         super(props)
 
         this.state = {
-            notes: [],
             currentPage: 1,
         };
     }
