@@ -37,7 +37,7 @@ const CreateNote = () => {
                     <label htmlFor="title" className="text-black text-sm ml-1">Title</label>
                     <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" className="w-full p-4 rounded-lg outline-none text-gray-300 bg-gray-800 block mb-4 " id="title" name="title" />
                     <label htmlFor="body" className="text-black text-sm ml-1">Description</label>
-                    <textarea value={body} onChange={(e) => setBody(e.target.value)} type="text" className="w-full h-36 p-4 rounded-lg text-gray-300 bg-gray-800 outline-none bg-transparent mb-4" id="body" name="title" />
+                    <textarea value={body} onChange={(e) => setBody(e.target.value)} type="text" className="w-full h-36 p-4 rounded-lg text-gray-300 bg-gray-800 outline-none bg-black mb-4" id="body" name="title" />
                     <div className="flex justify-between items-center">
                         <div>
                         </div>
