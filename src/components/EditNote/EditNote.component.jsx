@@ -63,7 +63,7 @@ class EditNote extends Component {
     handleDelete(e) {
         e.preventDefault();
         // Make an api call to delete the note with the id of this.props.match.params.id
-        axios.delete(`http://localhost:5000/notes/${this.props.match.params.id}`)
+        axios.delete(`https://notepad-live.herokuapp.com/api/notes/${this.props.match.params.id}`)
             .then(response => {
                 this.props.navigate('/')
             })
