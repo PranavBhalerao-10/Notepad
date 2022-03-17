@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import PushPinIcon from '@mui/icons-material/PushPin';
 import Alert from '../Alert/Alert.component';
 
 export function withRouter(Children) {
@@ -112,7 +111,7 @@ class EditNote extends Component {
                             </div>
                             <div>
                                 <button onClick={this.handlePinChange.bind(this)} className="bg-blue-500 text-white px-6 py-3 inline-block mb-6 shadow-lg rounded-lg hover:shadow flex items-center">
-                                    <PushPinIcon />
+                                    <img src='../../../Assets/thumbtack-solid.svg' alt="" />
                                     <span className="hidden ml-2 md:inline">{this.state.isPinned ? 'Pin Note' : 'Unpin Note'}</span>
                                 </button>
                             </div>
