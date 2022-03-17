@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Notes.styles.css'
 import notes from '../../db.json'
+import axios from 'axios';
 
 export default class Notes extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
+            notes: [],
             currentPage: 1,
         };
     }
     pinnedNotes() {
-        return notes.notes.filter((note) => note.isPinned)
+        return this.state.notes.filter((note) => note.isPinned)
     }
     unPinnedNotes() {
-        return notes.notes.filter((note) => note.isPinned === false)
+        return this.state.notes.filter((note) => note.isPinned === false)
+    }
+    componentDidMount() {
+        axios.get(`https://notepad-live.herokuapp.com/notes/`)
+            .then(response => this.setState({ notes: response.data }))
     }
     render() {
         const Notes = this.pinnedNotes().concat(this.unPinnedNotes())
